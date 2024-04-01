@@ -1,14 +1,191 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FormPractice</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormPractice</title>
+    <link rel="stylesheet" href="../work/css/css/reset.css">
+    <link rel="stylesheet" href="../work/css/css/base.css">
+    <link rel="stylesheet" href="../work/css/css/style.css">
 
+</head>
 <body>
+    <!-- メインの背景 -->
+    <main class="main">
+
+        <!-- 要素センター寄せのためのインナー -->
+        <div class="inner">
+            <h1 class="main-title">フォーム作成</h1>
+
+            <!-- フォームのレイアウト-->
+            <section class="main-form">
+
+                <!-- フォームタイトル -->
+                <h2 class="form-title">アカウント作成</h2>
+
+                <!-- ここからフォーム -->
+                <form action="#">
+
+                <!-- 個人情報 -->
+                <h3 class="content-title">個人情報</h3>
+                    <!-- 名字 -->
+                    <label for="first-name"><p class="label-text space must">名字</p></label>
+                    <input class="input-area" type="text" id="first-name" name="your-first-name">
+
+                    <!-- 名前 -->
+                    <label for="family-name"><p class="label-text space must">名前</p></label>
+                    <input class="input-area" type="text" id="family-name" name="your-family-name">
+
+                    <!-- 生年月日 -->
+                    <label for="birth-day"><p class="label-text space must">生年月日</p></label>
+                        <div class="birth-day-list">
+                        <!-- 年 -->
+                            <div class="drop-down year">
+                                <select class="input-area" name="year">
+                                <option value disabled selected>年</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                            </select>
+                            </div>
+                            <!-- 月 -->
+                            <div class="drop-down month">
+                                <select class="input-area" name="month">
+                                <option value disabled selected>月</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                </select>
+                            </div>
+                        <!-- 日 -->
+                            <div class="drop-down day">
+                                <select class="input-area" name="day">
+                                <option value disabled selected>日</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    <!-- 性別 -->
+                    <label for="gender"><p class="label-text space must">性別</p></label>
+                        <!-- display:flex -->
+                    <div class="select-gender">
+                        <!-- 男 -->
+                        <label class="gender-element">
+                            <div class="man">
+                                <input class="gender-content" type="radio" id="man-gender" name="your-gender" value="man"><span><p class="gender-list">男性</p></span>
+                            </div>
+                        </label>
+                        <!-- 女 -->
+                        <label class="gender-element">
+                            <div class="woman">
+                                <input class="gender-content" type="radio" id="woman-gender" name="your-gender" value="woman"><span><p class="gender-list">女性</p></span>
+                            </div>    
+                        </label>
+                        <!-- その他 -->
+                        <label class="gender-element">
+                            <div class="etc">
+                                <input class="gender-content" type="radio" id="etc-gender" name="your-gender" value="etc"><span><p class="gender-list">その他</p></span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 職業 -->
+                    <label for="job"><p class="label-text space">職業</p></label>
+                    <div class=" drop-down job">
+                        <select class="input-area label-text" name="your-job">
+                            <option value disabled selected>選択してください</option>
+                            <option value="学生">学生</option>
+                            <option value="会社員">会社員</option>
+                            <option value="主婦">主婦</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+    
+                <!-- アカウント情報 -->
+                <h3 class="content-title">アカウント情報</h3>
+                    <!-- アカウント名 -->
+                    <label for="account-name"><p class="label-text space must">アカウント名</p></label>
+                    <input class="input-area" type="text" id="account-name" name="your-account-name">
+                    <!-- メールアドレス -->
+                    <label for="account-mail"><p class="label-text space must">メールアドレス</p></label>
+                    <input class="input-area" type="mail" id="account-mail" name="your-account-mail">
+                    <!-- パスワード -->
+                    <label for="account-pass"><p class="label-text space must">パスワード</p></label>
+                    <input class="input-area" type="text" id="account-pass" name="your-account-pass">
+                    <!-- 確認用パスワード -->
+                    <label for="account-check-pass"><p class="label-text space must">確認用パスワード</p></label>
+                    <input class="input-area" type="text" id="account-check-pass" name="your-account-check-pass">
+
+                <!-- 連絡先 -->
+                <h3 class="content-title">連絡先</h3>
+                    <!-- 住所 -->
+                    <label for="adress"><p class="label-text space must">住所</p></label>
+                    <input class="input-area" type="text" id="adress" name="your-adress"> 
+                    <!-- 電話番号 -->
+                    <label for="tel"><p class="label-text space must">電話番号</p></label>
+                    <input class="input-area" type="tel" id="tel" name="your-tel"> 
+
+                <!-- 購読情報 -->
+                <h3 class="content-title">購読情報</h3>
+                    <!-- メールマガジン -->
+                    <div class="select-check-box space">
+                        <input type="checkbox" id="magazine" name="magazine">
+                        <label class="subscribe-check"  for="magazine"><p class="label-text">メールマガジン</p></label>
+                    </div>                
+                    <!-- クーポン -->
+                    <div class="select-check-box space">
+                        <input type="checkbox" id="coupon" name="coupon">
+                        <label class="subscribe-check"  for="coupon"><p class="label-text">クーポン</p></label>
+                    </div>
+
+                </form>
+
+                <!-- アカウント作成ボタン -->
+                <div class="submit-content">
+                    <button class="btn make-account" type="button">アカウント作成</button>
+                </div>
+
+                <!-- コピーライト -->
+                <div class="copy-right">
+                    <p>アカウントを作成することにより、<a href="#">利用規約</a>と<a href="#">プライバシーポリシー</a>に同意するものとします。</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
+
 
 </body>
-
 </html>
